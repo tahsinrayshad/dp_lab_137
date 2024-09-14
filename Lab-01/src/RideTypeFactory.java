@@ -1,5 +1,5 @@
-public class ridetypefactory {
-    public Iridetype getRideType(String rideType) {
+public class RideTypeFactory {
+    public static Iridetype getRideType(String rideType) {
         if (rideType.equalsIgnoreCase("LuxuryCar"))
             return new luxurycar();
         if (rideType.equalsIgnoreCase("BIKERIDE")) {
