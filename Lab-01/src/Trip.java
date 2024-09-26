@@ -7,18 +7,16 @@ public class Trip {
     private Driver driver;
     private Rider rider;
     private double distance;
-    private double timeOfDay;
     private double fare;
     private String status;
 
-    public Trip(String rideType, IpaymentMethods paymentMethod, NotificationManager notificationManager, Driver driver, Rider rider, double distance, double timeOfDay) {
+    public Trip(String rideType, String paymentMethod, NotificationManager notificationManager, Driver driver, Rider rider, double distance) {
         this.rideType = RideTypeFactory.getRideType(rideType);
-        this.paymentMethod = paymentMethod;
+        this.paymentMethod = PaymentFactory.getPaymentTYpe(paymentMethod);
         this.notificationManager = notificationManager;
         this.driver = driver;
         this.rider = rider;
         this.distance = distance;
-        this.timeOfDay = timeOfDay;
         this.fare = this.rideType.calculateFare(distance);
         this.status = "REQUESTED";
     }
@@ -44,14 +42,6 @@ public class Trip {
 
     public void setDistance(double distance) {
         this.distance = distance;
-    }
-
-    public double getTimeOfDay() {
-        return timeOfDay;
-    }
-
-    public void setTimeOfDay(double timeOfDay) {
-        this.timeOfDay = timeOfDay;
     }
 
     public Iridetype getRideType() {
