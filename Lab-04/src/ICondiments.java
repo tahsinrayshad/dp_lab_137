@@ -1,4 +1,4 @@
 public interface ICondiments {
-    String getName();
+    String getDescription();
     double getCost();
 }

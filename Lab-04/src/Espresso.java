@@ -6,7 +6,7 @@ public class Espresso implements IBeverage{
     }
 
     @Override
-    public double cost() {
+    public double getPrice() {
         return 1.99;
     }
 }

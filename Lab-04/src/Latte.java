@@ -6,7 +6,7 @@ public class Latte implements IBeverage{
     }
 
     @Override
-    public double cost() {
+    public double getPrice() {
         return 2.99;
     }
 }

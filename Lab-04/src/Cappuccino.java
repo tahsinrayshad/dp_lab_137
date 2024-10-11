@@ -5,7 +5,7 @@ public class Cappuccino implements IBeverage{
     }
 
     @Override
-    public double cost() {
+    public double getPrice() {
         return 3.99;
     }
 }

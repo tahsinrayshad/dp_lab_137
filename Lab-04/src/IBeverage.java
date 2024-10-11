@@ -1,4 +1,4 @@
 public interface IBeverage {
     String getDescription();
-    double cost();
+    double getPrice();
 }
