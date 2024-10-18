@@ -1,5 +1,6 @@
 public class HolidayBundle extends CompositeProduct{
-    public HolidayBundle(){
+    public HolidayBundle( double discount){
+        super(discount);
         build();
     }
 

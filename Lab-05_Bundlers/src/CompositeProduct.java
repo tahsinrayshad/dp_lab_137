@@ -2,6 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class CompositeProduct implements IProduct{
+    private double discount;
+
+    public CompositeProduct(double discount){
+        this.discount = discount;
+    }
     public List<IProduct> products = new ArrayList<>();
 
     public List<IProduct> getProducts(){
@@ -20,7 +25,7 @@ public abstract class CompositeProduct implements IProduct{
             price += product.getPrice();
         }
 
-        return price;
+        return price-discount;
     }
 
     public String getName(){
